@@ -1,40 +1,42 @@
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Ссылка:</b>
+  <b>РЎСЃС‹Р»РєР°:</b>
   <%= @product.url %>
 </p>
 
 <p>
-  <b>Картинка:</b>
-  <%= @product.picture %>
+  <b>РљР°СЂС‚РёРЅРєР°:</b>
+  <%= image_tag @product.picture, :height => 300 %>
+
 </p>
 
 <p>
-  <b>Цена:</b>
+  <b>Р¦РµРЅР°:</b>
   <%= @product.price %>
 </p>
 
 <p>
-  <b>ИД_Категории:</b>
+  <b>РР”_РљР°С‚РµРіРѕСЂРёРё:</b>
   <%= @product.categoryid %>
 </p>
 
 <p>
-  <b>Название:</b>
+  <b>РќР°Р·РІР°РЅРёРµ:</b>
   <%= @product.name %>
 </p>
 
 <p>
-  <b>Производитель:</b>
+  <b>РџСЂРѕРёР·РІРѕРґРёС‚РµР»СЊ:</b>
   <%= @product.vendor %>
 </p>
 
 <p>
-  <b>Описание:</b>
+  <b>РћРїРёСЃР°РЅРёРµ:</b>
   <%= @product.description %>
 </p>
 
 
-<%= link_to 'Редактировать', edit_product_path(@product) %> |
-<%= link_to 'Назад', products_path %>
+<%= link_to 'Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ', edit_product_path(@product) %> |
+<%= link_to 'РќР°Р·Р°Рґ', products_path %>
