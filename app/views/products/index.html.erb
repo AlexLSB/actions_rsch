@@ -2,30 +2,22 @@
 
 <table>
   <tr>
-    <th>Ссылка</th>
-    <th>Картинка</th>
-    <th>Цена</th>
-    <th>ИД_Категории</th>
-    <th>Название</th>
+    <th>Название товара</th>
     <th>Производитель</th>
-    <th>Описание</th>
     <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <th>Цена</th>
+
+	</tr>
 
 <% @products.each do |product| %>
   <tr>
-    <td><%= product.url %></td>
-    <td><%= product.picture %></td>
-    <td><%= product.price %></td>
-    <td><%= product.categoryid %></td>
-    <td><%= product.name %></td>
+    <td><%= link_to product.name, product %></td>
     <td><%= product.vendor %></td>
-    <td><%= product.description %></td>
-    <td><%= link_to 'Подробнее', product %></td>
-    <td><%= link_to 'Редактировать', edit_product_path(product) %></td>
-    <td><%= link_to 'Удалить', product, method: :delete, data: { confirm: 'Точно?' } %></td>
+    <td>  <%= image_tag product.picture, :height => 50 %></td>
+    <td><%= product.price %></td>
+    <td><%= link_to 'Купить', product %></td>
+    <td><%= link_to '	Подробнее', product %></td>
+
   </tr>
 <% end %>
 </table>

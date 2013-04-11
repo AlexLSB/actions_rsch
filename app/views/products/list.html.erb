@@ -1,0 +1,35 @@
+<h1>Список товаров</h1>
+
+<table>
+  <tr>
+    <th>Ссылка</th>
+    <th>Картинка</th>
+    <th>Цена</th>
+    <th>ИД_Категории</th>
+    <th>Название</th>
+    <th>Производитель</th>
+    <th>Описание</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+    <td><%= product.url %></td>
+    <td><%= product.picture %></td>
+    <td><%= product.price %></td>
+    <td><%= product.categoryid %></td>
+    <td><%= product.name %></td>
+    <td><%= product.vendor %></td>
+    <td><%= product.description %></td>
+    <td><%= link_to 'Подробнее', product %></td>
+    <td><%= link_to 'Редактировать', edit_product_path(product) %></td>
+    <td><%= link_to 'Удалить', product, method: :delete, data: { confirm: 'Точно?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Новый товар', new_product_path %>
