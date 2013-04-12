@@ -23,7 +23,7 @@ end
 
 group :production do
 #  gem 'pg', '0.12.2'
-  gem 'rack-google_analytics', :require => "rack/google_analytics"
+  gem 'rack-google-analytics', :require => 'rack/google-analytics'  
 end
 
 gem 'jquery-rails', '2.0.2'
