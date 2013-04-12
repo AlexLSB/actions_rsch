@@ -1,6 +1,7 @@
-<h1>Список товаров</h1>
 
-<b><%= link_to 'Перейти в корзину', 'cart' %></b>
+<h1>В корзине</h1>
+
+<b><%= link_to 'Перейти в каталог', '/' %></b>
 
 <table>
   <tr>
@@ -17,7 +18,7 @@
     <td><%= product.vendor %></td>
     <td>  <%= image_tag product.picture, :height => 50 %></td>
     <td><%= product.price %></td>
-    <td><%= link_to 'Купить', add_product_path(product) %></td>
+    <td><%= link_to 'Удалить', remove_product_path(product.cr), data: { confirm: 'Точно?' } %></td>
     <td><%= link_to '	Подробнее', product %></td>
 
   </tr>
@@ -25,7 +26,4 @@
 </table>
 
 <br />
-
-
-
 
